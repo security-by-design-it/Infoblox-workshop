@@ -39,7 +39,7 @@
    - Top CPU / memory usage
 4. Navigate to **Infoblox Grid → Grid Manager** — note the Grid Master and Members listed.
 
-> **✅ Expected:** Both members show green / Online status.
+> **✅ Expected:** Both members show green / Running status.
 
 ---
 
