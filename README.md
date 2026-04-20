@@ -37,7 +37,7 @@
    - Grid health status panel
    - DNS/DHCP service status per member
    - Top CPU / memory usage
-4. Navigate to **Grid → Grid Manager** — note the Grid Master and Members listed.
+4. Navigate to **Infoblox Grid → Grid Manager** — note the Grid Master and Members listed.
 
 > **✅ Expected:** Both members show green / Online status.
 
