@@ -48,10 +48,10 @@
 1. Go to **Grid → Grid Manager → Members** tab.
 2. Click on **Member 1** to open the member detail page.
 3. Review:
-   - Services running (DNS, DHCP)
-   - Hardware type / NIOS version
-   - License information
-4. Notice the **System** and **Services** sub-tabs.
+   - Services running (DNS, DHCP)(Members tab)
+   - Hardware type / NIOS version (Upgrade tab)
+   - License information (Licenses tab)
+4. Notice the sub-tabs.
 
 > **Discussion:** What would happen if Member 1 went offline? What services would be affected?
 
@@ -112,7 +112,7 @@ Now add records to your newly created zone.
    - **Canonical Name:** `webserver1.team-[yourname].workshop.lab`
 3. Save & Close.
 
-> **✅ Verify:** Use GUI **Diagnostic Tools** → dig to test: `webserver1.team-[yourname].workshop.lab` should return `192.168.20.101`.
+> **✅ Verify:** Use GUI **Search** → to test: `webserver1.team-[yourname].workshop.lab` should return `192.168.20.101`.
 
 ---
 
