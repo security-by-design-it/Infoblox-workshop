@@ -211,7 +211,7 @@ Now add records to your newly created zone.
 3. Add the following options:
    | Option | Value |
    |--------|-------|
-   | 3 (routers) | `10.20.X.1` |
+   | 3 (routers) | `10.20.<student number>.250` |
    | 6 (domain-name-servers) | `192.168.10.11` |
    | 15 (domain-name) | `workshop.lab` |
 4. Save & Close.
@@ -224,7 +224,7 @@ Now add records to your newly created zone.
 
 1. Still in your network, click **+ Add → Add Fixed Address**.
 2. Configure:
-   - IP: `10.20.X.50`
+   - IP: `10.20.<student number>.50`
    - MAC address: `00:50:56:AA:BB:CC` (simulated)
    - Name: `reserved-printer-[yourname]`
    - Comment: `Colour printer 3rd floor`
@@ -238,9 +238,10 @@ Now add records to your newly created zone.
 1. Go to **Data Management → IPAM**.
 2. In the IP Map view, navigate to the `192.168.20.0/24` network.
 3. Observe:
-   - Green = in use / assigned
+   - Black = in use / assigned
+   - Purple = DNS object
    - White = available
-   - Blue = DHCP range
+   - Green = DHCP range
 4. Hover over a used IP — a tooltip shows hostname, MAC, and lease info.
 5. Click on a used IP for the full record detail.
 
@@ -271,8 +272,8 @@ Work through these scenarios. Use the tools covered in the presentation.
 
 > A user reports that `broken.workshop.lab` cannot be resolved.
 
-1. Search for `broken.workshop.lab` in the GUI — does it exist?
-2. If not, create the record: IP `192.168.20.150`.
+1. Search for `broken.team-[yourname].workshop.lab` in the GUI — does it exist?
+2. If not, create the record: IP `10.20.<student number>.150`.
 3. Use **DNS → Diagnostic Tools → nslookup** from Member 1 to verify resolution.
 4. What was the root cause?
 
@@ -280,12 +281,13 @@ Work through these scenarios. Use the tools covered in the presentation.
 
 **Scenario B — PTR record mismatch**
 
-> The security team reports that `192.168.20.101` resolves in reverse to a different name than expected.
+> The security team reports that `192.168.20.10<student number>` resolves in reverse to a different name than expected.
 
-1. Navigate to the PTR record for `192.168.20.101` in the reverse zone.
+1. Navigate to the PTR record for `192.168.20.10<student number>` in the reverse zone.
 2. What does it say? Does it match the forward A/Host record?
 3. If there is a mismatch, fix it.
-4. Re-test using dig: `dig -x 192.168.20.101 @192.168.10.11`
+
+Testing can be done with dig or nslookup: `dig -x 192.168.20.101 @192.168.10.11`
 
 ---
 
@@ -318,9 +320,6 @@ Work through these scenarios. Use the tools covered in the presentation.
 
 1. On the Windows DC, open **DNS Manager**.
 2. Verify that `workshop.lab` zone shows correct NS records pointing to Infoblox members.
-3. Run `dcdiag /test:dns` on the DC — check for errors.
-4. Run `nslookup webserver1.workshop.lab` from a Windows client — verify it resolves to `192.168.20.101`.
-5. Check that `_msdcs.workshop.lab` zone exists on Infoblox and contains SRV records for the DC.
 
 ---
 
