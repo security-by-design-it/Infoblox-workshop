@@ -10,9 +10,9 @@
 
 | Component | Details |
 |-----------|---------|
-| Grid Master | https://192.168.10.10 |
-| Grid Member 1 | 192.168.10.11 (DNS + DHCP) |
-| Grid Member 2 | 192.168.10.12 (DNS only) |
+| Grid Master | LAB-IBX-GM |
+| Grid Member 1 | LAB-IBX-Member-1 (DNS + DHCP) |
+| Grid Member 2 | LAB-IBX-Member-2 (DNS only) |
 | Admin account | admin / infoblox |
 | Lab domain | workshop.lab |
 | Lab network | 192.168.20.0/24 |
@@ -29,8 +29,8 @@
 
 ### 1.1 — Log In and Explore the Dashboard
 
-1. Open a browser and navigate to `https://192.168.10.10`
-2. Accept the self-signed certificate warning and log in:
+1. Open a browser login to the lab and navigate to `LAB-IBX-GM`
+2. Log in:
    - Username: `admin`
    - Password: `infoblox`
 3. You land on the **Dashboard**. Identify the following widgets:
@@ -94,7 +94,7 @@ Now add records to your newly created zone.
 2. Click **+ Add → Host Record**.
 3. Fill in:
    - **Name:** `webserver1.team-[yourname].workshop.lab`
-   - **IPv4 Address:** `192.168.20.101`
+   - **IPv4 Address:** `192.168.20.10<student number>`
    - **Create PTR record:** ✅ checked
    - **Comment:** `Lab web server`
 4. Click **Save & Close**.
@@ -102,7 +102,7 @@ Now add records to your newly created zone.
 **Create a second host:**
 1. Repeat the steps for:
    - Name: `appserver1.team-[yourname].workshop.lab`
-   - IP: `192.168.20.102`
+   - IP: `192.168.20.20<student-number>`
    - PTR: checked
 
 **Create a CNAME alias:**
