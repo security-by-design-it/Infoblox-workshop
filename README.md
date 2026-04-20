@@ -112,7 +112,7 @@ Now add records to your newly created zone.
    - **Canonical Name:** `webserver1.team-[yourname].workshop.lab`
 3. Save & Close.
 
-> **✅ Verify:** Use GUI **Search** → to test: `webserver1.team-[yourname].workshop.lab` should return `192.168.20.101`.
+> **✅ Verify:** Use GUI **Search** → to test: `webserver1.team-[yourname].workshop.lab` should return `192.168.20.10<student number>`.
 
 ---
 
@@ -120,7 +120,7 @@ Now add records to your newly created zone.
 
 1. Navigate to **Data Management → DNS → Zones → Reverse Mapping Zones**.
 2. Open `20.168.192.in-addr.arpa`.
-3. Confirm PTR records exist for `192.168.20.101` and `192.168.20.102`.
+3. Confirm PTR records exist for `192.168.20.10<student number>` and `192.168.20.20<student number>`.
 
 > **Discussion:** When would a missing PTR record cause problems in production?
 
@@ -183,7 +183,7 @@ Now add records to your newly created zone.
 
 1. In **Data Management → DHCP → Networks**, click **+ Add → Add IPv4 Network**.
 2. Configure:
-   - Network: `10.20.[yourlab].0/24` (trainer will assign your /24)
+   - Network: `10.20.<student number>.0/24` (trainer will assign your /24)
    - Comment: `Lab network for [yourname]`
    - Click **Next**
 3. On the DHCP Member screen, assign **Member 1** as the DHCP server.
