@@ -95,7 +95,6 @@ Now add records to your newly created zone.
 3. Fill in:
    - **Name:** `webserver1.team-[yourname].workshop.lab`
    - **IPv4 Address:** `192.168.20.10<student number>`
-   - **Create PTR record:** ✅ checked
    - **Comment:** `Lab web server`
 4. Click **Save & Close**.
 
